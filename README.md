@@ -63,7 +63,7 @@ In summary, the following represents the training setup:
 
 The training and validation losses are visualized in the figure below.
 
-<img src="https://i.ibb.co/r2ZHRtV/plot.png" alt="Losses" width="256" height="173">
+<img src="https://i.ibb.co/r2ZHRtV/plot.png" alt="Losses" width="512" height="345">
 
 ### Results
 
