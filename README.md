@@ -15,7 +15,7 @@ The dataset used in this project can be divided into two sections, corresponding
 
 ## Implementation
 
-DeepWeather was implemented in PyTorch and is available in this repo as a Jupyter Notebook. In what follows, implementation specifics will be discussed.
+DeepWeather was implemented in PyTorch and is available in this repo as a Jupyter Notebook. The model is pretrained for 50 epochs (model weights are supplied). In what follows, implementation specifics will be discussed.
 
 ### Inputs
 
