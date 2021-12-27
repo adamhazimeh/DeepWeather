@@ -58,9 +58,17 @@ In summary, the following represents the training setup:
 - Optimizer: SGD
 - Learning Rate: 0.001
 - Momentum: 0.9
-
 - Dropout: 0.3
 - Stride: 2
 
+The training and validation losses are visualized in the figure below.
+
+![Loss](https://i.ibb.co/r2ZHRtV/plot.png)
 
 ### Results
+
+The coefficient of determination (R2 score) was used for model evaluation. R2 was calculated for each of (1) the model's predictions on training data and validation data and (2) weather forecasts (both were calculated against the ground-truth weather observations).
+
+The results are summarized in the table below.
+
+![R2 Scores](https://i.ibb.co/C7c5CHN/r2.png)
