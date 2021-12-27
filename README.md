@@ -37,4 +37,4 @@ The three fully connected layers following the CNN’s output contain 1024, 128,
 
 The diagram below sums up the model architecture.
 
-![Model Architecture](https://i.ibb.co/GWBRkXp/arch.png)
+![Model Architecture](https://i.ibb.co/qRJYKft/Deep-Weather.png)
