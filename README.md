@@ -38,3 +38,29 @@ The three fully connected layers following the CNN’s output contain 1024, 128,
 The diagram below sums up the model architecture.
 
 ![Model Architecture](https://i.ibb.co/kHTxGz1/Deep-Weather.jpg)
+
+
+### Experimental Setup
+
+The model architecture presented previously was implemented using PyTorch and the model was trained on a GPU runtime for computational efficiency for a total of 50 epochs (with batch size = 2).
+
+Backpropagation was also tested on several optimizers, including ADAM and Stochastic Gradient Descent (SGD), using Mean Squared Error (MSE) and Mean Absolute Error (MAE) as loss functions. SGD, with a learning rate of 0.001 and a momentum of 0.9, was observed to converge faster than ADAM. A learning rate of 0.01 was also tested, but quickly led to loss divergence. In addition, MSE displayed higher convergence stability and higher R2 scores than MAE. Initially, model performance was tested without regularization (dropout/batch normalization), although it displayed visible signs of overfitting (training error was considerably higher than validation error). To reduce the effect of overfitting, dropout (dropout probability of 0.3) and batch normalization layers were added to the model architecture.
+
+In addition, the model was first implemented without stride in its convolutional layers (stride = 1). However, the available GPU runtime was not able to handle the large number of parameters in the model, and so a stride of 2 was used instead to shrink the number of parameters.
+
+As for the dataset, data was split into training and validation sets via a 80-20 split (considering the relatively small size of the dataset). It was originally planned to collect data for 2,500 stations (~10,000 dataset entries), but API access restrictions limited our data collection to 500 stations.
+
+In summary, the following represents the training setup:
+
+- Epochs: 50
+- Batch Size: 2
+- Loss Function: Mean Squared Error
+- Optimizer: SGD
+- Learning Rate: 0.001
+- Momentum: 0.9
+
+- Dropout: 0.3
+- Stride: 2
+
+
+### Results
